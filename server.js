@@ -33,7 +33,7 @@ app.use(
 app.post("/Downloads", upload.array("files", 12), (req, res) => {
   //   return res.json("status: Success");
   return res.send(
-    '<script>alert("File Berhasil di Upload"); window.location.href="/ftp"</script>'
+    '<script>alert("File Berhasil di Upload"); window.location.href="/Download"</script>'
   );
 });
 

@@ -24,7 +24,7 @@ app.get("/", function (req, res) {
 });
 
 app.use(
-  "/ftp",
+  "/Download",
   express.static("../storage/downloads"),
   serveIndex("../storage/downloads", { icons: true })
 );
@@ -39,8 +39,3 @@ app.post("/Downloads", upload.array("files", 12), (req, res) => {
 
 app.listen(port, () => console.log(`Server Running ${port}`));
 
-// app.use(
-//     "/Download",
-//     express.static("../storage/shared/Download"),
-//     serveIndex("../storage/shared/Download", { icons: true })
-//   );

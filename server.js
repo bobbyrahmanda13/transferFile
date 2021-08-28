@@ -6,7 +6,7 @@ const port = process.env.port || 3000;
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     // name folder upload
-    cb(null, "../ftp");
+    cb(null, "../storage/downloads");
   },
   filename: (req, file, cb) => {
     const { originalname } = file;
@@ -25,12 +25,12 @@ app.get("/", function (req, res) {
 
 app.use(
   "/ftp",
-  express.static("../ftp"),
-  serveIndex("../ftp", { icons: true })
+  express.static("../storage/downloads"),
+  serveIndex("../storage/downloads", { icons: true })
 );
 
 // name link upload
-app.post("/Download", upload.array("files", 12), (req, res) => {
+app.post("/Downloads", upload.array("files", 12), (req, res) => {
   //   return res.json("status: Success");
   return res.send(
     '<script>alert("File Berhasil di Upload"); window.location.href="/ftp"</script>'

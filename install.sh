@@ -1,4 +1,4 @@
-npm install --save express multer serve-index
+npm install --save express multer serve-index ejs
 cd ..
 npm install -g nodemon
 termux-fix-shebang $PREFIX/bin/nodemon

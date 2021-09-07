@@ -5,14 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FTP NodeJS by Rahman</title>
-  </head>
+<style>
+h1,h2,h3{
+  text-align:center;
+  margin:1rem;
+  font-family: roboto;
+}
+.container{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.btnView{
+  background:#5e5df0;
+  border-radius:999px;
+  box-shadow:#5e5df0 0 10px 20px -10px;
+  box-sizing:border-box;
+  color:#FFFFFF;
+  text-decoration:none;
+  cursor:pointer;
+  font-family:roboto;
+  font-size:16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline:0 solid transparent;
+  padding:0.8rem 1.2rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action:manipulation;
+  word-break: break-word;
+  border:0;
+}
+
+input[type=file]{
+  position:relative;
+  -webkit-appearance: textfield;
+}
+
+input[type=file]::-webkit-file-upload-button{
+border:none;
+margin:0;
+padding:0;
+-webkit-appearance: none;
+width:0;
+}
+
+input[type=file]:after{
+  content:"Browse";
+  position:relative;
+  -webkit-appearance: button;
+  background-color:#5e5df0;
+  color:white;
+  font-family: roboto;
+  font-weight: 700;
+  padding:0.8rem;
+  border-radius:1rem;
+}
+
+.btnUpload{
+  background-color:#5e5df0;
+  color:white;
+  border:none;
+  margin:7% 0;
+  cursor:pointer;
+  border-radius: 1rem;
+  padding:1em;
+  font-weight: 700;
+  font-family:roboto;
+  box-shadow:#5e5df0 0 10px 20px -10px;
+}
+
+.btnUpload:focus{
+  outline:none;
+}
+
+.custom-h1{
+  font-weight: 700;
+  margin-bottom: 10%;
+}
+</style>
+
+</head>
   <body>
-    <h1>File Upload</h1>
-    <form action="/Downloads" method="post" enctype="multipart/form-data">
-      <input type="file" name="files" multiple />
-      <button>Submit</button>
-    </form>
-    <h2>View File Upload</h2>
-   <a href="/Download"style="text-decoration:none;">Lihat</a>
+    <div class="containerFluid">
+      <h1 class="custom-h1">Transfer File Server by Rahman</h1>
+      <h2>Silahkan Upload File</h2>
+       <div class="container">
+        <form action="/Downloads" method="post" enctype="multipart/form-data">
+          <input type="file" name="files" class="" multiple />
+          <button class="btnUpload">Upload File</button>
+        </form>
+      </div>
+      <h2>Folder File Upload</h2>
+      <div class="container">
+        <a href="/Download" class="btnView">Lihat File Upload</a>
+      </div>
+    </div>
   </body>
 </html>

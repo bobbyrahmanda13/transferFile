@@ -8,7 +8,7 @@ Transfer File Server / FTP Server ini dapat digunakan untuk mengupload semua jen
 
 * Aplikasi Termux, Termux:api, Termux:widget
 * Google Playstore (Android) (tidak support untuk IOS karena termux tidak ada di Apple Store (jika ada berarti bisa menggunakan ini))
-* nodejs-lts (termux), git, nano, yarn
+* nodejs-lts (termux), git, nano, yarn, termux-api
 
 ### Installing
 
@@ -18,7 +18,7 @@ Transfer File Server / FTP Server ini dapat digunakan untuk mengupload semua jen
 ```
 pkg update && pkg upgrade
 termux-setup-storage
-pkg install nodejs-lts git nano yarn
+pkg install nodejs-lts git nano yarn termux-api
 ```
 * Clone github repository
 ```

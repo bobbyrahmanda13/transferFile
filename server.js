@@ -3,6 +3,7 @@ const multer = require("multer");
 const serveIndex = require("serve-index");
 const port = process.env.port || 3000;
 const path = require("path");
+let ip = require("ip");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -42,5 +43,5 @@ app.post("/Downloads", upload.array("files", 12), (req, res) => {
   );
 });
 
-app.listen(port, () => console.log(`Server Running ${port}`));
+app.listen(port, () => console.log(`Server Running http://${ip.address()}:${port}`));
 

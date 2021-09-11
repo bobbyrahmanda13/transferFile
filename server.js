@@ -35,11 +35,11 @@ app.use(
   serveIndex("../storage/downloads", { icons: true })
 );
 
-// name link upload
-app.post("/Downloads", upload.array("files", 12), (req, res) => {
+// name link upload // files = name => input (html)
+app.post("/Downloads", upload.array("files", 100), (req, res) => {
   //   return res.json("status: Success");
   return res.send(
-    '<script>alert("File Berhasil di Upload"); window.location.href="/Download"</script>'
+    '<script>window.location.href="/"</script>'
   );
 });
 

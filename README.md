@@ -6,13 +6,14 @@ Transfer File Server / FTP Server ini dapat digunakan untuk mengupload semua jen
 
 ### Dependencies
 
-* Aplikasi Termux, Termux:api, Termux:widget
-* Google Playstore (Android) (tidak support untuk IOS karena termux tidak ada di Apple Store (jika ada berarti bisa menggunakan ini))
+* Aplikasi Termux => https://f-droid.org/en/packages/com.termux/
+* Termux:api => https://f-droid.org/en/packages/com.termux.api/
+* Termux:widget => https://f-droid.org/en/packages/com.termux.widget/
 * nodejs-lts (termux), git, nano, yarn, termux-api
 
 ### Installing
 
-* Install Aplikasi Termux, Termux:api, Termux:widget di Google Playstore
+* Install Aplikasi Termux, Termux:api, Termux:widget yang sudah di Download
 * Untuk cara pasang Termux:widget bisa cari di google ya
 * Buka Termux lalu ketik
 ```

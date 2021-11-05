@@ -120,6 +120,10 @@ font-family: Roboto;
   display: none;
 }
 
+.send{
+background-color:red;
+}
+
 </style>
 
 </head>
@@ -153,7 +157,7 @@ font-family: Roboto;
     <script>
       const uploadForms = document.getElementById("uploadForm");
       const inpFile = document.getElementById("files");
-
+      const btnUploaded = document.querySelector(".btnUpload");
       const progressBarCont = document.querySelector(".progress-bar");
       const progressBarFill = document.querySelector(
         "#progressBar > .progress-bar-fil"
@@ -168,6 +172,10 @@ font-family: Roboto;
 
         xhr.upload.onloadstart = function (e) {
           progressBarCont.classList.remove("dnone");
+          // btnUploaded.classList.add("dnone");
+          btnUploaded.disabled = "disabled";
+          btnUploaded.value = "Send Data";
+          btnUploaded.classList.add("send");
         };
 
         xhr.upload.onprogress = (e) => {

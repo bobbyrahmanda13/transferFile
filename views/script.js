@@ -38,7 +38,7 @@ function uploadFile() {
   };
   xhr.onload = function (e) {
     if(e.currentTarget.status < 400){
-      alert("File Berhasil Di Upload");
+      // alert("File Berhasil Di Upload");
   } else {
       alert("Gagal Upload Coba Lagi");
   };

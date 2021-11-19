@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const serveIndex = require("serve-index");
+const bodyParser = require("body-parser");
 const port = process.env.port || 3000;
 const path = require("path");
 let ip = require("ip");
@@ -21,7 +22,14 @@ const upload = multer({ storage });
 const app = express();
 // app.use(express.static("public"));
 
-app.set("views", path.join(__dirname,"/"));
+
+// parse application/json
+app.use(bodyParser.json())
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }))
+ 
+
+app.set("views", path.join(__dirname,"views"));
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {

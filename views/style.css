@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+h1,h2,h3{
+  text-align:center;
+  margin:1rem;
+  font-family: roboto;
+}
+.container{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.btnView{
+  background:#5e5df0;
+  border-radius:999px;
+  box-shadow:#5e5df0 0 10px 20px -10px;
+  box-sizing:border-box;
+  color:#FFFFFF;
+  text-decoration:none;
+  cursor:pointer;
+  font-family:roboto;
+  font-size:16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline:0 solid transparent;
+  padding:0.8rem 1.2rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action:manipulation;
+  word-break: break-word;
+  border:0;
+}
+
+input[type=file]{
+  position:relative;
+  -webkit-appearance: textfield;
+  font-weight: 600;
+}
+
+input[type="file"]::file-selector-button {
+  border: none;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  background-color: #5e5df0;
+  position: relative;
+  color: white;
+  font-family: roboto;
+  border-radius: 1rem;
+  box-shadow: #5e5df0 0 5px 10px -5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btnUpload{
+  background-color:#5e5df0;
+  color:white;
+  border:none;
+  margin:7% 0;
+  cursor:pointer;
+  border-radius: 1rem;
+  padding:1em;
+  font-weight: 700;
+  font-family:roboto;
+  box-shadow:#5e5df0 0 10px 20px -10px;
+}
+
+.btnUpload:focus{
+  outline:none;
+}
+
+.custom-h1{
+  font-weight: 700;
+  margin-bottom: 5%;
+}
+
+form{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.progress-bar {
+  height: 25px;
+  width: 250px;
+  border: 2px solid darkblue;
+  border-radius: 999px;
+}
+
+.progress-bar-fil {
+  border-radius: 999px;
+  height: 100%;
+  width: 0%;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  transition: width 0.25s;
+}
+
+.progress-bar-text {
+margin-left: 110px;
+margin-bottom: 60px;
+font-weight: 700;
+font-size: 15px;
+font-family: Roboto;
+}
+
+.dnone {
+  display: none;
+}
+
+.send{
+background-color:red;
+}

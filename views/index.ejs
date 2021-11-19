@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTP NodeJS by Rahman</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+  <body>
+    <div class="containerFluid">
+      <h1 class="custom-h1">Transfer File Server by Rahman</h1>
+      <h2>Silahkan Upload File</h2>
+<!-- Input File -->
+       <div class="container">
+        <form action="/Downloads" id="uploadForm" method="post" enctype="multipart/form-data">
+          <input type="file" name="files" class="" id="files" multiple />
+          <input type="submit" class="btnUpload" value="Upload File">
+        </form>
+      </div>
+<!-- Progress Bar -->
+      <div class="container">
+        <div class="progress-bar dnone" id="progressBar">
+          <div class="progress-bar-fil">
+            <span class="progress-bar-text">0%</span>
+          </div>
+        </div>
+      </div>
+<!-- View Folder Upload -->
+      <h2>Folder File Upload</h2>
+      <div class="container">
+        <a href="/Download" class="btnView">Lihat File Upload</a>
+      </div>
+    </div>
+
+<!-- Script.js Progress Bar -->
+   <script src="script.js"></script>
+  </body>
+</html>

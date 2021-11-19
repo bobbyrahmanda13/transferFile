@@ -47,7 +47,8 @@ app.use(
 app.post("/Downloads", upload.array("files", 100), (req, res) => {
   //   return res.json("status: Success");
   return res.send(
-    '<script>window.location.href="/"</script>'
+    '<script>window.location.href="/"</script>',
+    '<script>alert("File Berhasil Di Upload")</script>'
   );
 });
 

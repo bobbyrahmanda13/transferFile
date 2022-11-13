@@ -2,7 +2,7 @@ const express = require("express");
 const multer = require("multer");
 const serveIndex = require("serve-index");
 const bodyParser = require("body-parser");
-const port = process.env.port || 3000;
+const port = process.env.port || 7777;
 const path = require("path");
 let ip = require("ip");
 

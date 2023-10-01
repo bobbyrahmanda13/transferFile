@@ -27,14 +27,14 @@ app.use(express.static("views"));
 app.use(bodyParser.json())
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
- 
 
-app.set("views", path.join(__dirname,"views"));
+
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.get("/", function (req, res) {
- // res.sendFile(__dirname + "/index.html");
-res.render("index");
+app.get("/", function(req, res) {
+  // res.sendFile(__dirname + "/index.html");
+  res.render("index");
 });
 
 app.use(
@@ -46,10 +46,10 @@ app.use(
 // name link upload // files = name => input (html)
 app.post("/Downloads", upload.array("files", 100), (req, res) => {
   //   return res.json("status: Success");
-  return res.send(
-    '<script>alert("File Berhasil Di Upload"); window.location.href="/";</script>'
-   
-  );
+  const successMesssage = "File berhasil di upload"
+  const sendAlertToUser = `
+<script>alert("${successMesssage}"); window.location.href="/"; </script>`
+  return res.send(sendAlertToUser);
 });
 
 app.listen(port, () => console.log(`Server Running http://${ip.address()}:${port}`));

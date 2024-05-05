@@ -1,6 +1,5 @@
-npm install --save express multer serve-index ejs ip body-parser
+npm install --save express multer serve-index ejs ip body-parser nodemon
 cd ..
-npm install nodemon
 termux-fix-shebang $PREFIX/bin/nodemon
 cd transferFile
 mv bagiFile.sh ../.shortcuts

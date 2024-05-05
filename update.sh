@@ -1,3 +1,3 @@
 cd ..
-npm i -g npm nodemon
+npm i -g nodemon
 termux-fix-shebang $PREFIX/bin/nodemon
